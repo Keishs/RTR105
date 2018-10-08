@@ -36,8 +36,3 @@ NameError: name 'save' is not defined
 >>> mkdir dgr_20181008.py
 SyntaxError: invalid syntax
 >>> 
-# RTR105
-Datormācības kursa elektroniskā klade
-./git-upload 20181008_15_30
-/git-upload 20181008_15_#0
-
