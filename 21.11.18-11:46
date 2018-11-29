@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+
+#print(vars())
+def mana_funkcija(x):
+    return sin(x) #sin(x) raksti sev vajadzīgo funkciju
+
+import sys
+sys.path.append('/usr/local/anaconda3/lib/python3.6/site-packages')
+
+from numpy import sin, linscape #jainstale numpy
+from matplotlib import pyplot as plt  #jainstale matplotlib
+
+x = linspace(0,4,11)
+#print(vars())
+y = sin(x)
+
+plt.grid()
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Funkcija un tās atvasinājumi')
+plt.plot(x,y)
+plt.plot(x,y,'ro')
+plt.legend(['funkcija ar starpvertībām', 'funkcijas dažas vērtības'])
+#plt.show()
+
+
+
+
+# atvasinajuma aprekins, izmantojot funkcijas aprekinu
+N = len(x)
+delta_x = x[1] - x[0]
+derivative = []
+print(derivative)
+for i in range(N):
+    temp = (mana_funkcija(x[i] + delta_x) - mana_funkcija(x[i])) / delta_x
+    derivative.append(temp)
+    print(derivative)
